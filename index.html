@@ -22,6 +22,46 @@
 #inventory{position:fixed;inset:0;background:#06110edb;z-index:4;display:none;place-items:center;padding:16px}#invcard{width:min(500px,100%);padding:20px}#invcard h2{margin:0 0 12px;letter-spacing:.1em}#items{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.item{padding:12px;background:#ffffff0d;border:1px solid var(--line);border-radius:10px;text-align:left;font-size:12px}.item strong{display:block;font-size:20px;margin-bottom:4px}.item span{color:var(--muted);font-size:10px}
 #mobile{position:fixed;inset:0;pointer-events:none;display:none}.stick{position:absolute;bottom:26px;left:22px;width:112px;height:112px;border-radius:50%;background:#14272277;border:1px solid #ffffff55;pointer-events:auto}.knob{position:absolute;width:42px;height:42px;left:34px;top:34px;border-radius:50%;background:#d9e8c4aa;border:1px solid #fff8}.touchlook{position:absolute;right:0;bottom:0;width:55%;height:55%;pointer-events:auto}.mobilebtn{position:absolute;right:20px;bottom:30px;width:62px;height:62px;border-radius:50%;pointer-events:auto;background:#1a332bd9;color:white;border:1px solid #ffffff66;font-weight:900}
 @media(max-width:700px){#mobile{display:block}#bottom{bottom:10px;left:50%;gap:5px}.slot{width:43px;height:46px;font-size:18px}#hint{bottom:68px;font-size:10px}#actions{right:12px;bottom:105px}.action{padding:9px 10px;min-width:82px}#stats{top:76px;right:10px;width:155px;padding:8px}.stat{grid-template-columns:43px 1fr 20px;font-size:8px;gap:5px}#clock{top:14px;right:14px}#brand{top:14px;left:10px}}
+
+:root{--glass:rgba(13,26,25,.78);--line:rgba(230,241,216,.2);--cream:#f5f1df;--green:#c4e39b;--muted:#b9c7b8}
+body{background:#8db5a4;font-family:Inter,ui-sans-serif,system-ui,Arial}
+.panel{background:linear-gradient(145deg,rgba(17,37,32,.9),rgba(8,20,21,.8));border:1px solid rgba(226,241,209,.22);border-radius:17px;backdrop-filter:blur(18px);box-shadow:0 14px 40px #07141066,inset 0 1px #ffffff12}
+#brand{top:18px;left:18px;padding:13px 17px;font-size:17px;letter-spacing:.19em;border-left:3px solid #b9d88c}
+#brand small{font-size:9px;letter-spacing:.16em;color:#c2d6a7}
+#stats{top:18px;right:18px;width:min(255px,48vw);padding:14px 16px}
+.stat{grid-template-columns:57px 1fr 28px;margin:8px 0;font-size:9px;letter-spacing:.12em;color:#d0ddcb}
+.track{height:8px;background:#e7f1dc22;border:1px solid #ffffff0a}
+.fill{background:linear-gradient(90deg,#81b66b,#d0e79a);box-shadow:0 0 10px #b9dc9166}
+.stat:nth-child(3) .fill{background:linear-gradient(90deg,#4d9cbd,#a6dce9)}
+.stat:nth-child(4) .fill{background:linear-gradient(90deg,#c18b4d,#f2d18a)}
+#clock{top:116px;right:22px;padding:8px 12px;border-radius:20px;background:#10221dbb;border:1px solid #ffffff20;font-size:10px;letter-spacing:.17em}
+#prompt{top:53%;padding:12px 18px;border-radius:12px;border:1px solid #d4e9ad77;background:#172d24e8;font-weight:800;letter-spacing:.06em;box-shadow:0 8px 30px #0006}
+#bottom{bottom:18px;gap:9px;padding:8px;border-radius:18px;background:#0b1b1acc;border:1px solid #ffffff25;backdrop-filter:blur(14px);box-shadow:0 10px 35px #0006}
+.slot{width:58px;height:58px;border-radius:11px;background:linear-gradient(145deg,#344b3d,#172a25);border:1px solid #ffffff25;font-size:25px;box-shadow:inset 0 1px #ffffff20}
+.slot.active{outline:2px solid #d0eaa2;background:linear-gradient(145deg,#59734c,#263d2c);box-shadow:0 0 18px #b9dc9140}
+.slot b{font-size:10px;color:#f5f1df;text-shadow:0 1px 3px #000}
+#actions{right:18px;bottom:110px;gap:9px}
+.action{border-radius:11px;background:linear-gradient(145deg,#233e32ed,#10251f);border:1px solid #d9eac34a;box-shadow:0 6px 20px #0005;color:#eef3df;padding:13px 15px;letter-spacing:.1em;transition:transform .15s,background .15s}
+.action:active{transform:scale(.96);background:#557548}
+#hint{bottom:102px;font-size:10px;letter-spacing:.06em;color:#eaf1dd}
+#menu{background:linear-gradient(90deg,rgba(5,16,15,.55),rgba(5,16,15,.16)),linear-gradient(0deg,rgba(5,16,15,.5),transparent 65%)}
+#card{width:min(540px,100%);padding:38px 34px;background:linear-gradient(150deg,rgba(13,32,28,.9),rgba(7,18,19,.87));border:1px solid #e4edcf45;box-shadow:0 25px 80px #0008;text-align:left;position:relative;overflow:hidden}
+#card:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:linear-gradient(90deg,#c5e59a,#6e9a67,transparent)}
+#card h1{font-size:clamp(42px,10vw,70px);letter-spacing:.13em;line-height:1;text-shadow:0 5px 24px #0008}
+#card .sub{font-size:10px;letter-spacing:.3em;margin:12px 0 28px;color:#c3df9b}
+#card p{color:#d1ddcf;line-height:1.7;font-size:13px}
+.primary{border-radius:10px;background:linear-gradient(135deg,#d7edae,#a7cb7b);box-shadow:0 8px 24px #9fca6d35;color:#1b2c20;padding:16px 22px;letter-spacing:.13em;transition:transform .15s,filter .15s}
+.primary:active{transform:scale(.98);filter:brightness(.95)}
+#inventory{backdrop-filter:blur(8px)}
+#invcard{padding:24px;background:linear-gradient(145deg,#183128,#0b1918);border:1px solid #d8e9c544;box-shadow:0 20px 70px #0009}
+#invcard h2{font-size:19px;letter-spacing:.16em}
+.item{background:linear-gradient(145deg,#ffffff12,#ffffff06);border:1px solid #ffffff20;border-radius:12px;padding:14px}
+.item strong{font-size:22px;color:#e5edcf}
+.item span{display:block;margin-top:5px;color:#b9c8b6}
+#mobile .stick{background:#10231da8;border:1px solid #e5f2d477;box-shadow:0 8px 25px #0005}
+#mobile .knob{background:linear-gradient(145deg,#e0edc9dd,#9ebd83dd);box-shadow:0 3px 10px #0005}
+#mobile .mobilebtn{background:linear-gradient(145deg,#52794b,#1d392c);border:1px solid #e0efbd99;box-shadow:0 6px 20px #0007}
+@media(max-width:700px){#brand{top:12px;left:10px;padding:10px 12px;font-size:13px}#stats{top:68px;right:10px;width:166px;padding:9px 10px}.stat{grid-template-columns:43px 1fr 20px;font-size:8px;gap:5px;margin:6px 0}#clock{top:13px;right:10px;font-size:9px;padding:7px 9px}#bottom{bottom:9px;gap:5px;padding:5px}.slot{width:43px;height:46px;font-size:19px}#hint{bottom:67px;font-size:9px}#actions{right:10px;bottom:103px;gap:7px}.action{min-width:84px;padding:10px 9px;font-size:9px}#card{padding:28px 23px}#card p{font-size:12px}}
 </style>
 </head>
 <body>
@@ -47,7 +87,7 @@
 import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
 const scene=new THREE.Scene();scene.background=new THREE.Color(0x9fc9c0);scene.fog=new THREE.Fog(0x9fc9c0,35,115);
 const camera=new THREE.PerspectiveCamera(65,innerWidth/innerHeight,.1,220);
-const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;document.body.prepend(renderer.domElement);
+const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setSize(innerWidth,innerHeight);renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;document.body.prepend(renderer.domElement);
 scene.add(new THREE.HemisphereLight(0xe5f4ff,0x61734b,2));
 const sun=new THREE.DirectionalLight(0xffedc7,2.2);sun.position.set(-35,55,25);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-65;sun.shadow.camera.right=65;sun.shadow.camera.top=65;sun.shadow.camera.bottom=-65;scene.add(sun);
 const mat=(c,r=.9)=>new THREE.MeshStandardMaterial({color:c,roughness:r});
@@ -57,12 +97,21 @@ const water=new THREE.Mesh(new THREE.PlaneGeometry(220,24),waterMat);water.rotat
 const beach=new THREE.Mesh(new THREE.PlaneGeometry(220,13),sand);beach.rotation.x=-Math.PI/2;beach.position.set(0,.015,-20);scene.add(beach);
 function block(parent,w,h,d,material,x,y,z){const m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m}
 const resources=[];
-function tree(x,z,s=1){const g=new THREE.Group();g.position.set(x,0,z);g.scale.setScalar(s);block(g,.55,3,.55,trunk,0,1.5,0);const crown=new THREE.Mesh(new THREE.IcosahedronGeometry(1.55,1),Math.random()>.5?leaf1:leaf2);crown.position.y=3.5;crown.scale.set(1,1.1,1);crown.castShadow=true;g.add(crown);scene.add(g);resources.push({type:'wood',mesh:g,x,z,active:true});}
+function tree(x,z,s=1){const g=new THREE.Group();g.position.set(x,0,z);g.scale.setScalar(s);block(g,.62,3.6,.62,trunk,0,1.8,0);for(let j=0;j<3;j++){const b=block(g,.16,1.35,.16,trunk,j%2?-.55:.55,2.35,j===1?.3:-.25);b.rotation.z=j%2?-.55:.55}for(let j=0;j<5;j++){const crown=new THREE.Mesh(new THREE.IcosahedronGeometry(1.22,1),j%2?leaf1:leaf2);crown.position.set((j%2?-.62:.62)*.45,3.25+Math.floor(j/2)*.62,(j<2?-.35:.35));crown.scale.set(1.05,1.12,1);crown.castShadow=true;g.add(crown)}scene.add(g);resources.push({type:'wood',mesh:g,x,z,active:true});}
 function rock(x,z,s=1){const g=new THREE.Group();g.position.set(x,.35*s,z);const m=new THREE.Mesh(new THREE.DodecahedronGeometry(.8*s,0),stoneMat);m.scale.set(1.25,.75,1);m.castShadow=true;g.add(m);scene.add(g);resources.push({type:'stone',mesh:g,x,z,active:true});}
 function bush(x,z){const g=new THREE.Group();g.position.set(x,0,z);const m=new THREE.Mesh(new THREE.IcosahedronGeometry(.7,1),mat(0x477c48));m.position.y=.5;m.scale.y=.7;g.add(m);for(let i=0;i<3;i++){const b=new THREE.Mesh(new THREE.SphereGeometry(.13,8,8),mat(0xc94d62));b.position.set((Math.random()-.5)*.7,.7+Math.random()*.2,(Math.random()-.5)*.7);g.add(b)}scene.add(g);resources.push({type:'berry',mesh:g,x,z,active:true});}
 for(let i=0;i<115;i++){let x=(Math.random()-.5)*180,z=(Math.random()-.5)*170;if(Math.abs(x)<12&&Math.abs(z)<12)continue;if(z<-27)continue;tree(x,z,.7+Math.random()*.65)}
 for(let i=0;i<58;i++){let x=(Math.random()-.5)*160,z=(Math.random()-.5)*150;if(Math.abs(x)<10&&Math.abs(z)<10)continue;rock(x,z,.65+Math.random()*.8)}
 for(let i=0;i<32;i++){let x=(Math.random()-.5)*140,z=(Math.random()-.5)*130;if(Math.abs(x)<9&&Math.abs(z)<9)continue;bush(x,z)}
+// Scenic ridges, drifting clouds and a winding trail
+const ridgeMaterials=[mat(0x718a78),mat(0x829b85),mat(0x9caf91)];
+for(let i=0;i<32;i++){const h=10+Math.random()*22,w=9+Math.random()*13;const ridge=new THREE.Mesh(new THREE.ConeGeometry(w,h,5),ridgeMaterials[i%3]);ridge.position.set((Math.random()-.5)*220,h*.34,-90-Math.random()*75);ridge.rotation.y=Math.random()*2;ridge.castShadow=true;scene.add(ridge)}
+const sunDisc=new THREE.Mesh(new THREE.SphereGeometry(5,20,16),new THREE.MeshBasicMaterial({color:0xffe6b0}));sunDisc.position.set(-48,43,-105);scene.add(sunDisc);
+const cloudMat=mat(0xf2f5e9);
+for(let i=0;i<18;i++){const cloud=new THREE.Group();cloud.position.set((Math.random()-.5)*190,22+Math.random()*18,-65-Math.random()*65);for(let j=0;j<5;j++){const puff=new THREE.Mesh(new THREE.BoxGeometry(3+Math.random()*3,1.2+Math.random(),2.5+Math.random()*2),cloudMat);puff.position.set((j-2)*2.1,Math.random()*.7,Math.random()*.6);cloud.add(puff)}scene.add(cloud)}
+const pathPoints=[new THREE.Vector3(-18,.035,28),new THREE.Vector3(-10,.035,16),new THREE.Vector3(-5,.035,4),new THREE.Vector3(3,.035,-8),new THREE.Vector3(13,.035,-19),new THREE.Vector3(20,.035,-27)];
+const pathCurve=new THREE.CatmullRomCurve3(pathPoints);const path=new THREE.Mesh(new THREE.TubeGeometry(pathCurve,90,2.1,8,false),mat(0xb39a70));path.position.y=-.01;scene.add(path);
+for(let i=0;i<150;i++){const x=(Math.random()-.5)*180,z=(Math.random()-.5)*150;if(Math.abs(x)<4&&Math.abs(z)<8)continue;const blade=new THREE.Mesh(new THREE.ConeGeometry(.09,.55,4),mat(i%3?0x91b56a:0xc0bd79));blade.position.set(x,.25,z);blade.rotation.z=(Math.random()-.5)*.35;scene.add(blade)}
 // Distant blocky hills
 for(let i=0;i<22;i++){const h=8+Math.random()*18;const m=new THREE.Mesh(new THREE.ConeGeometry(8+Math.random()*8,h,5),mat(i%2?0x708c83:0x829b8b));m.position.set((Math.random()-.5)*190,h/2-1,-75-Math.random()*35);scene.add(m)}
 // Player avatar
